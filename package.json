@@ -8,7 +8,8 @@
     "/lib"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "release": "release-it"
   },
   "repository": {
     "type": "git",
@@ -33,5 +34,23 @@
   "homepage": "https://github.com/codergon/uri-metadata#readme",
   "dependencies": {
     "axios": "^0.27.2"
+  },
+  "devDependencies": {
+    "release-it": "^15.10.3"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    }
   }
 }

@@ -1,11 +1,9 @@
 # uri-metadata
 
-Extract metadata information including Twitter and Open Graph properties from any http/https url
+uri-metadata is a TypeScript library for extracting metadata information, including Twitter and Open Graph properties, from any HTTP/HTTPS URL. It is specifically designed to be useful in development of Chrome extensions.
 
 ## Highlights
 
-- Written in TypeScript
-- Actively maintained
 - [Passing in a callback](#options)
 
 ## Installation
@@ -16,7 +14,7 @@ npm install uri-metadata --save
 
 ## Usage
 
-Fetch metadata as shown below (returns a Promise)
+Fetch metadata using the provided example below, which returns a Promise:
 
 ```javascript
 import metadata from "uri-metadata";
@@ -29,7 +27,7 @@ try {
 }
 ```
 
-If a callback is provided
+Alternatively, you can pass a callback function:
 
 ```javascript
 import metadata from "uri-metadata";
@@ -39,7 +37,7 @@ metadata.get("https://awwwards.com", (data, err) => {
 });
 ```
 
-Returns an object containing the url metadata grouped by type
+The response is an object containing the URL metadata grouped by type:
 
 ```javascript
 {
@@ -62,13 +60,13 @@ Returns an object containing the url metadata grouped by type
 
 ## Options
 
-Pass in true/false as a third argument to group or ungroup metatags(defaults to true). For example,
+You can pass `true` or `false` as a third argument to group or ungroup metatags (defaults to `true`). For example:
 
 ```javascript
 response = await metadata.get("https://www.awwwards.com", false);
 ```
 
-which returns
+This returns:
 
 ```javascript
 {
@@ -83,7 +81,7 @@ which returns
 
 ## Contributing
 
-1. Fork Repo and create your feature branch: `git checkout -b my-update`
+1. Fork the repository and create your feature branch: `git checkout -b my-update`
 2. Commit your changes: `git commit -am 'Updated some parts'`
 3. Push to the branch: `git push origin my-update`
 4. Submit a pull request
