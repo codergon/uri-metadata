@@ -9,7 +9,6 @@
 
     /* ADDITIONAL CHECKS */
     "forceConsistentCasingInFileNames": true,
-    "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
